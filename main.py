@@ -45,7 +45,7 @@ hang = ['''
 t=0
 f=0
 while(tries!=0):
-    x=input("Guess a character which may be in the word: ")
+    x=input("\nGuess a character which may be in the word: ")
     if x in word:
         l=word.count(x)
         ind=0
@@ -53,7 +53,7 @@ while(tries!=0):
             if i==0:
                 ind=word.find(str(x))
             else:
-                ind=word.find(str(x),ind)
+                ind=word.find(str(x),ind+1)
             s=s[0:ind]+x+s[ind+1:len(word)]
         print("\n",x,"is present in the word!!!You are going good!!!")
         print(s)
